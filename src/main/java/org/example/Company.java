@@ -57,10 +57,10 @@ public class Company {
     @Override
     public String toString() {
         return "Company{" +
-                "id = " + id +
-                ", name = '" + name + '\'' +
-                ", address = " + address +
-                ", employees = " + employees;
+                "id : " + id +
+                ", name : '" + name + '\'' +
+                ", address : " + address +
+                "\nEmployees : " + employees;
     }
 
     @Override

@@ -7,15 +7,16 @@ import java.util.Objects;
  * Dodaj setery, gettery oraz metode toString()
  */
 
-public class Employee {
+public abstract class Employee implements Workable{
     private int id;
     private long pesel;
     private String name;
     private String surname;
     private Address address;
     private Department department;
+    private EmployeeRole employeeRole;
 
-    public Employee(int id, long pesel, String name, String surname, Address address, Department department) {
+    public Employee(int id, long pesel, String name, String surname, Address address, Department department, EmployeeRole employeeRole) {
         this.id = id;
         this.pesel = pesel;
         this.name = name;
@@ -74,9 +75,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee" +
-                "\nid = " + id + ",\npesel = " + pesel + ",\nname = " + name +
-                ",\nsurname = " + surname + ",\naddress = " + address + ",\ndepartment = " + department;
+        return "\nid = " + id + ",\npesel = " + pesel + ",\nname = " + name +
+                ",\nsurname = " + surname + ",\naddress = " + address + ",\ndepartment = " + department ;
     }
 
     @Override
@@ -94,5 +94,10 @@ public class Employee {
     @Override
     public int hashCode() {
         return Objects.hash(id, pesel, name, surname, address, department);
+    }
+
+    @Override
+    public boolean doWork() {
+        return false;
     }
 }

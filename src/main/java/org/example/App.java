@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class App {
     public static void main(String[] args) {
         /**
@@ -58,16 +60,54 @@ public class App {
         /**
          * Test - Address
          */
-        Address address = new Address("Opolska", "Warszawa", "00-123");
-        System.out.println(address);
+//        Address address = new Address("Opolska", "Warszawa", "00-123");
+//        System.out.println(address);
 
         /**
          * Test - Employee
          */
-        Employee employee1 = new Employee(1, 34563423456l, "Jan", "Nowak",
-                address, Department.ADMINISTRATION);
-        System.out.println(employee1);
+//        Employee employee1 = new Employee(1, 34563423456l, "Jan", "Nowak",
+//                address, Department.ADMINISTRATION);
+//        System.out.println(employee1);
 
         //Company company = new Company()
+
+        /**
+         * TEST
+         */
+        Developer developer1 = new Developer(1, 11456723456l, "Wojtek", "Diadek",
+                new Address("Opolska", "Warszawa", "10-123"), Department.MARKETING);
+        Developer developer2 = new Developer(2, 22456723456l, "Piotr", "Piadek",
+                new Address("Sueska", "Gdynia", "00-123"), Department.HR);
+        Developer developer3 = new Developer(3, 33456723456l, "Alan", "Wiadek",
+                new Address("Pazia", "Warszawa", "40-123"), Department.IT);
+        Developer developer4 = new Developer(4, 44456723456l, "Bartek", "Ziadek",
+                new Address("Znana", "Katowice", "50-123"), Department.ADMINISTRATION);
+
+        TeamLeader teamLeader1 = new TeamLeader(5, 55456723456l, "Wojtek", "Diadek",
+                new Address("Opolska", "Warszawa", "50-123"), Department.HEAD);
+        TeamLeader teamLeader2 = new TeamLeader(6, 66456723456l, "Piotr", "Piadek",
+                new Address("Sueska", "Gdynia", "60-123"), Department.BRANDING);
+        TeamLeader teamLeader3 = new TeamLeader(7, 77456723456l, "Alan", "Wiadek",
+                new Address("Pazia", "Warszawa", "70-123"), Department.IT);
+        TeamLeader teamLeader4 = new TeamLeader(8, 88456723456l, "Bartek", "Ziadek",
+                new Address("Znana", "Katowice", "80-123"), Department.SALES);
+
+        ArrayList<Employee> arrayList = new ArrayList<>();
+        arrayList.add(developer1);
+        arrayList.add(developer2);
+        arrayList.add(developer3);
+        arrayList.add(developer4);
+        arrayList.add(teamLeader1);
+        arrayList.add(teamLeader2);
+        arrayList.add(teamLeader3);
+        arrayList.add(teamLeader4);
+
+        Company company = new Company(1000, "Nokia",
+                new Address("Plater", "Katowice", "33-333"), arrayList);
+
+
+
+        System.out.println(company);
     }
 }
