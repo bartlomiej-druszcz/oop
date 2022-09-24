@@ -27,4 +27,8 @@ public enum Department {
     Department(int departmentId) {
         this.departmentId = departmentId;
     }
+
+    public int getDepartmentId() {
+        return departmentId;
+    }
 }
