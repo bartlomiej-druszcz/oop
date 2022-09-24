@@ -5,7 +5,7 @@ package org.example;
  */
 
 /**
- * ) Napisz klasę Person
+ * 1) Napisz klasę Person
  *
  * Z polami:
  *
@@ -18,32 +18,41 @@ package org.example;
  *
  * - bezparametrowy
  * - dla wszystkich parametrów
+ *
+ * 3) Dopisz settery i gettery dla wszystkich pól.
  */
 
 public class Person {
-    private String name;
+    private String firstName;
+    private String lastName;
     private int age;
+    private String gender;
 
     public Person() {
 
     }
 
-    public Person(String name, int age) {
-        this.name = name;
+    public Person(String firstName, String lastName, int age, String gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
+        this.gender = gender;
     }
 
-    public Person(int age) {
-        this.name = "NN";
-        this.age = age;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getName() {
-        return name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getAge() {
@@ -52,5 +61,13 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
